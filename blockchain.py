@@ -1,11 +1,19 @@
-blockchain = [[1]]
+# Initializing out blockchain list
+blockchain = []
 
 
 def get_last_blockchain_value():
+    """ Returns last value of current blockchain """
     return blockchain[-1]
 
 
 def add_value(transaction_amount, last_transaction=[1]):
+    """ Append a new value as well as the last blockchain value to the blockchain 
+
+    Arguments:
+        transaction_amount: The amount that should be added
+        last_transaction: The last blockchain transaction (default [1])
+    """
     blockchain.append([last_transaction, transaction_amount])
 
 
